@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Apprendre les bases d'HTML 5</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://urlr.me/sX4Ttu" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container text-center mt-5">
+
+            <!-- ----------------------------------------------------------- -->
+            <!--                                                             -->
+            <!--
+                TODO ÉTAPE 1 : Ajoute une balise HTML de type "h1" pour rajouter
+                               un titre a cette page.
+                              (tu peux écrire ton nom/prénom par exemple)
+
+            -->
+            <!--                                                             -->
+            <!-- ----------------------------------------------------------- -->
+            <h1> Balise H1 écrite par l'élève </h1>
+            <!-- code ici -->
+
+
+            <!-- ----------------------------------------------------------- -->
+            <!--                                                             -->
+            <!--
+                TODO ÉTAPE 2 : Ajoute une balise de type h4, rouge, et souligné.
+            -->
+            <!--                                                             -->
+            <!-- ----------------------------------------------------------- -->
+            <style>
+                h4 {
+                    color: red;                  /* Texte en rouge */
+                    text-decoration: underline;  /* Souligné */
+                }
+            </style>
+            <h4> Text écris par l'utilisateur </h4>
+
+
+
+            <!-- code ici -->
+            <style>
+                /* code ici */
+            </style>
+
+
+            <!-- ----------------------------------------------------------- -->
+            <!--                                                             -->
+            <!--
+                TODO ÉTAPE 3 : Écris et complète le code à l'aide de la
+                               feuille d'aide.
+                               Trouve la valeur de la clé numéro trois pour
+                               libérer le chat.
+            -->
+            <!--                                                             -->
+            <!-- ----------------------------------------------------------- -->
+            <script>
+                cleNumero1 = 15;
+                cleNumero2 = 20;
+                cleNumero3 = 0 ;  // Clé à deviner ici
+
+                cleAdditionnee = cleNumero1 + cleNumero2;
+
+                if (cleNumero3 === cleAdditionnee) {
+                    validiteDeLaCle = true;
+                } else {
+                    validiteDeLaCle = false;
+                }
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- ----------------------------------------------------------- -->
+            <!--                                                             -->
+            <!--
+                FIXME : Fin de l'activité | Code pour la vérification des étapes
+            -->
+            <!--                                                             -->
+            <!-- ----------------------------------------------------------- -->
+
+            <div class="row justify-content-center">
+                <div class="col-md-4 text-center">
+                    <!-- Conteneur pour superposer les images -->
+                    <div class="image-container d-flex justify-content-center">
+                        <img src="prison.png" id="prison" class="img-fluid rounded" alt="Image de prison">
+                        <img src="chat.png" id="chat" class="img-fluid rounded" alt="Image de Kirikou">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        // Affichage du bouton si la clé est valide
+        document.addEventListener("DOMContentLoaded", function () {
+            if (validiteDeLaCle) {
+                // Créer un conteneur pour centrer le bouton
+                let divCentrale = document.createElement("div");
+                divCentrale.classList.add("d-flex", "justify-content-center", "mt-3"); // Utilisation de Bootstrap pour centrer
+
+                let bouton = document.createElement("button");
+                bouton.innerText = "Libérer !";
+                bouton.id = "deleteBtn";
+                bouton.classList.add("btn", "btn-danger");
+
+                // Ajouter le bouton dans le conteneur
+                divCentrale.appendChild(bouton);
+
+                // Sélectionner le conteneur principal et la section (row) contenant les images
+                let container = document.querySelector(".container");
+                let rowImages = container.querySelector(".row");
+
+                // Insérer le conteneur du bouton AVANT la section des images
+                container.insertBefore(divCentrale, rowImages);
+
+                // Ajouter l'événement au bouton
+                bouton.addEventListener("click", function () {
+                    document.getElementById("prison").style.display = "none";
+                });
+            }
+        });
+
+        // Sélection des éléments HTML
+        const image = document.getElementById("prison");
+        const deleteBtn = document.getElementById("deleteBtn");
+
+        // Ajout d'un événement au clic sur le bouton
+        deleteBtn.addEventListener("click", function() {
+            image.style.display = "none"; // Cache l'image
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</html>
+
+
+

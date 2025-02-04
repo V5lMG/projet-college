@@ -7,7 +7,7 @@ body {
     background-image: url(fond-neutral.png);
     background-repeat: repeat;
     font-family: Arial, sans-serif;
-    height: 100%;
+    height: 100vh;
 }
 .image-container {
     position: relative;
@@ -16,14 +16,20 @@ body {
     position: absolute;
 }
 #prison {
-    z-index: 1;
-}
-#kirikou {
     z-index: 2;
 }
+#chat {
+    z-index: 1;
+}
 
+h1 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
 
-
+img {
+    margin-top: 70px;
+}
 
 button {
     height: 3em;
@@ -72,3 +78,18 @@ button:hover {
         transform: translate(0);
     }
 }
+
+.image-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    position: relative;
+    height: 300px; /* Ajuste la hauteur selon tes besoins */
+}
+
+.image-container img {
+    position: absolute;
+    max-width: 100%;
+}
+
